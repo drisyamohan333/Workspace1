@@ -1,0 +1,35 @@
+﻿@model XmlDemo.Models.ProductCategory
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>ProductCategory</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.strCategory)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.strCategory)
+            @Html.ValidationMessageFor(model => model.strCategory)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

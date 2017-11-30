@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+  <Product>
+    <Name>Fan</Name>
+    <Details>Polar</Details>
+    <Price>1500</Price>
+    <Category>1</Category>
+  </Product>
+</Products>
