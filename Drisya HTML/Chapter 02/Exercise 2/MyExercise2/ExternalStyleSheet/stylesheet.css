@@ -1,0 +1,18 @@
+ body {
+
+            background-image: url('background.gif');
+            background-color:#aacf43;
+            background-repeat: repeat-x;
+        }
+details{font-family: Script MT;color:green;font-size:15;font-weight:bold;}
+
+ h1{
+            font-family: Script MT;
+            color:green;
+            font-size:30;
+            font-weight:bold;
+           
+        }
+i{color:green;}
+
+p{color:green;}
