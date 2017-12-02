@@ -1,0 +1,22 @@
+﻿@model Employee.Models.EmployeeManager
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>EmployeeManager</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.strManager)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.strManager)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EmployeeManagerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

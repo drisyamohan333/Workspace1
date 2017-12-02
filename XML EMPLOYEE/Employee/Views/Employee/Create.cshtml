@@ -1,0 +1,51 @@
+﻿@model Employee.Models.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Employee</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Employee_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Employee_Name)
+            @Html.ValidationMessageFor(model => model.Employee_Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Salary)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Salary)
+            @Html.ValidationMessageFor(model => model.Salary)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmployeeManagerID, "employeemanager")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EmployeeManagerID", String.Empty)
+            @Html.ValidationMessageFor(model => model.EmployeeManagerID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
